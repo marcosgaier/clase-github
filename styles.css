@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr repeat(2, 2fr) 0.5fr;
+    grid-template-columns: 0.5fr repeat(2, 2fr);
+    grid-template-areas: 
+    "nav header header"
+    "nav main main"
+    "nav main main"
+    "nav footer footer";
+    grid-column-gap:20px;
+    grid-row-gap: 20px;
+    
+    ;
+} 
+
+header{
+background-color: gold;
+grid-area: header;
+}
+
+nav{
+background-color: gold;
+grid-area: nav;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "seccionUno aside"
+    "seccionDos aside";
+    grid-column-gap:20px;
+    grid-row-gap: 20px;
+}
+
+
+#seccionUno{
+background-color: gold;
+grid-area: seccionUno;
+display: grid;
+grid-template-rows: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+grid-column-gap:10px;
+grid-row-gap: 10px;
+justify-items: stretch;
+align-items: stretch;
+}
+
+#seccionUno div{
+    background-color: rgb(249, 129, 255);
+    border: 1px solid black
+
+}
+.alignSelf{
+    justify-self: stretch;
+}
+
+#seccionDos{
+background-color: gold;
+grid-area: seccionDos;
+}
+
+aside{
+background-color: gold;
+grid-area: aside;
+}
+
+footer{
+background-color: gold; 
+grid-area: footer;   
+}
